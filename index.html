@@ -2,169 +2,142 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Chao Wang| Math & Data Analytics</title>
+  <title>Chao Wang</title>
+
   <style>
-  .project {
-    margin-bottom: 45px;
-  }
-
-  .badge {
-    background-color: #e8f0fe;
-    color: #1a73e8;
-    font-size: 0.75em;
-    padding: 4px 8px;
-    margin-left: 8px;
-    border-radius: 6px;
-    vertical-align: middle;
-  }
-
-  .metric {
-    font-size: 0.9em;
-    color: #444;
-    margin: 8px 0;
-  }
-
-  .tags {
-    margin: 12px 0;
-  }
-
-  .tag {
-    display: inline-block;
-    background-color: #f2f2f2;
-    padding: 6px 10px;
-    margin-right: 8px;
-    border-radius: 6px;
-    font-size: 0.85em;
-  }
-
-  /* Filters */
-  .filters {
-    margin-bottom: 25px;
-  }
-
-  .filter-btn {
-    background: #f5f5f5;
-    border: none;
-    padding: 8px 14px;
-    margin-right: 8px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.9em;
-  }
-
-  .filter-btn.active {
-    background: #1a73e8;
-    color: white;
-  }
-
-  .filter-btn:hover {
-    background: #ddd;
-  }
-</style>
-
+    .project { margin-bottom: 45px; }
+    .metric { font-size: 0.9em; color: #444; margin: 8px 0; }
+    .tag {
+      display: inline-block;
+      background-color: #f2f2f2;
+      padding: 6px 10px;
+      margin-right: 8px;
+      border-radius: 6px;
+      font-size: 0.85em;
+    }
+  </style>
 </head>
-<script>
-  function filterProjects(category) {
-    const projects = document.querySelectorAll('.project');
-    const buttons = document.querySelectorAll('.filter-btn');
-
-    buttons.forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
-
-    projects.forEach(project => {
-      const categories = project.dataset.category.split(' ');
-      if (category === 'all' || categories.includes(category)) {
-        project.style.display = 'block';
-      } else {
-        project.style.display = 'none';
-      }
-    });
-  }
-</script>
 
 <body>
 
-  <h1>Chao Wang</h1>
+<h1>Chao Wang</h1>
+
+<p>
+Mathematics major with a Statistics minor, focused on actuarial risk modeling,
+statistical learning, and quantitative analysis of uncertainty in insurance
+and financial contexts.
+</p>
+
+<p>
+<a href="https://github.com/rafa-legend21">GitHub</a> ·
+<a href="https://www.linkedin.com/in/chao-wang-721752270/">LinkedIn</a> ·
+<a href="documents - Cw/Chao-CV.pdf">Resume</a>
+</p>
+
+<h2>Actuarial Focus</h2>
+
+<p>
+<strong>SOA Exams:</strong> Exam P (Passed), Exam FM (Passed), Exam SRM (Passed)
+</p>
+
+<p>
+Strong background in probability, stochastic processes, regression, and statistical learning,
+with academic and practical interest in insurance pricing, reserving, and risk classification.
+</p>
+
+<h2>Projects</h2>
+
+<div class="project">
+  <h3>Diabetes Risk Prediction</h3>
   <p>
-    Mathematics major with a Statistics minor, focused on applied data analytics,
-    predictive modeling, and risk-oriented problem solving.
+    Modeled individual health risk using probabilistic classification models,
+    emphasizing predictive accuracy, interpretability, and uncertainty assessment.
+    The project focused on translating statistical outputs into meaningful risk measures.
+  </p>
+
+  <p class="metric">
+    <strong>Evaluation:</strong> ROC-AUC, calibration analysis, confusion matrix
   </p>
 
   <p>
-    <a href="https://github.com/rafa-legend21">GitHub</a> ·
-    <a href="https://www.linkedin.com/in/chao-wang-721752270/">LinkedIn</a> ·
-    <a href="documents - Cw/Chao-CV.pdf">Resume</a>
+    <span class="tag">Risk Classification</span>
+    <span class="tag">Statistical Learning</span>
+    <span class="tag">Healthcare Data</span>
   </p>
 
-  <div class="section">
-    <h2>Projects</h2>
-	<!-- Filters -->
-	<div class="project">
-    	<h3>Housing Price Prediction <span style="font-weight: normal;">(Hackathon)</span></h3>
+  <p>
+    <strong>Tools:</strong> Python, pandas, scikit-learn<br>
+    <a href="https://github.com/yourusername/diabetes-risk-project" target="_blank">
+      View full project on GitHub →
+    </a>
+  </p>
+</div>
 
-    	<p>
-      	Built predictive models to estimate housing sale prices using structured property data
-      	derived from the Ames Housing dataset. Collaborated in a team setting to perform data
-      	preprocessing, feature engineering, and model comparison under time constraints, with
-      	an emphasis on predictive performance and interpretability.
-    	</p>
+<div class="project">
+  <h3>Housing Price Prediction <span style="font-weight: normal;">(Hackathon)</span></h3>
 
-	
-    <!-- Metric Line (optional but recommended) -->
-    <p class="metric">
-      <strong>Evaluation:</strong> RMSLE used for model comparison
-    </p>
+  <p>
+    Built predictive regression models to estimate housing sale prices using structured
+    property data from the Ames Housing dataset. Collaborated under time constraints
+    to perform data preprocessing, feature engineering, and model comparison, with
+    emphasis on interpretability and error metrics relevant to financial risk estimation.
+  </p>
 
-    <div class="tags">
-      <span class="tag">Regression</span>
-      <span class="tag">Machine Learning</span>
-      <span class="tag">Feature Engineering</span>
-    </div>
+  <p class="metric">
+    <strong>Evaluation:</strong> RMSLE, cross-validation
+  </p>
 
-    <p>
-      <strong>Tools:</strong> Python, pandas, scikit-learn, XGBoost
-    </p>
+  <p>
+    <span class="tag">Regression</span>
+    <span class="tag">Predictive Modeling</span>
+    <span class="tag">Feature Engineering</span>
+  </p>
 
-    <p>
-      <a href="https://github.com/rafa-legend21/IAA-housing-price-prediction" target="_blank">
-        View full project on GitHub →
-      </a>
-    </p>
-  </div>
+  <p>
+    <strong>Tools:</strong> Python, pandas, scikit-learn, XGBoost<br>
+    <a href="https://github.com/rafa-legend21/IAA-housing-price-prediction" target="_blank">
+      View full project on GitHub →
+    </a>
+  </p>
+</div>
 
-    <div class="project">
-      <h3>Diabetes Risk Prediction</h3>
-      <p>
-        Modeled the probability of diabetes diagnosis using historical health data.
-        Emphasized data preprocessing, classification models, and performance metrics.
-      </p>
-      <p>
-        <span class="tag">Classification</span>
-        <span class="tag">Statistical Learning</span>
-        <span class="tag">Healthcare Data</span>
-      </p>
-      <p>
-        <strong>Tools:</strong> Python, pandas, scikit-learn<br>
-        <a href="https://github.com/yourusername/diabetes-risk-project">
-          View full project on GitHub →
-        </a>
-      </p>
-    </div>
+<div class="project">
+  <h3>Word Embeddings via SVD</h3>
+  <p>
+    Constructed interpretable word embeddings using a co-occurrence matrix and
+    truncated singular value decomposition. Evaluated embeddings through similarity
+    and analogy tasks, with attention to bias and interpretability in real-world applications.
+  </p>
 
-  </div>
+  <p>
+    <span class="tag">Linear Algebra</span>
+    <span class="tag">Dimensionality Reduction</span>
+    <span class="tag">NLP</span>
+  </p>
+
+  <p>
+    <strong>Tools:</strong> R, Linear Algebra<br>
+    <a href="https://github.com/rafa-legend21/word-embeddings-svd" target="_blank">
+      View full project on GitHub →
+    </a>
+  </p>
+</div>
+
 <div class="project">
   <h3>Hash Table Implementation (Java)</h3>
   <p>
     Designed and implemented a hash table data structure from scratch in Java,
-    focusing on efficient key-value storage, collision handling, and performance.
-    This project strengthened my understanding of data structures and algorithmic
-    efficiency.
+    focusing on efficient key-value storage, collision resolution, and algorithmic
+    performance. This project strengthened my understanding of computational efficiency
+    and data organization.
   </p>
+
   <p>
     <span class="tag">Data Structures</span>
     <span class="tag">Algorithms</span>
     <span class="tag">Java</span>
   </p>
+
   <p>
     <strong>Tools:</strong> Java<br>
     <a href="https://github.com/rafa-legend21/Java-hash-table" target="_blank">
@@ -172,35 +145,25 @@
     </a>
   </p>
 </div>
-<h3>Word Embeddings via SVD</h3>
-<p>
-Built interpretable word embeddings from large-scale text data using a
-co-occurrence matrix and truncated SVD. Evaluated embedding quality through
-similarity queries, analogy tasks, and semantic analysis, with attention to
-bias and real-world NLP applications.
-</p>
+
+<h2>Relevance to Actuarial Science</h2>
 
 <p>
-<strong>Tools:</strong> R, Linear Algebra, NLP
+These projects emphasize statistical modeling, prediction under uncertainty,
+and model evaluation—core components of actuarial work in pricing, reserving,
+and risk classification. My training in probability, stochastic processes,
+and regression motivates my pursuit of graduate study in actuarial science.
 </p>
+
+<h2>About</h2>
 
 <p>
-<a href="https://github.com/rafa-legend21/word-embeddings-svd">
-View full project on GitHub →
-</a>
+I am currently pursuing a degree in Mathematics with a minor in Statistics.
+My academic interests center on actuarial risk modeling, statistical learning,
+and the application of probability and statistics to insurance and financial
+decision-making. I enjoy applying quantitative methods to real-world problems
+involving uncertainty and risk.
 </p>
-
-
-	
-  <div class="section">
-    <h2>About</h2>
-    <p>
-      I am currently pursuing a degree in Mathematics with a minor in Statistics.
-      My interests lie at the intersection of data analytics, machine learning,
-      and actuarial-style risk modeling. I enjoy applying quantitative methods
-      to real-world decision-making problems.
-    </p>
-  </div>
 
 </body>
 </html>
